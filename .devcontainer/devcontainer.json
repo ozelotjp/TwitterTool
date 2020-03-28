@@ -1,0 +1,23 @@
+// https://code.visualstudio.com/docs/remote/containers#_devcontainerjson-reference
+{
+  "name": "TwitterTool",
+  "extensions": [
+    // General
+    "editorconfig.editorconfig",
+    "codezombiech.gitignore",
+    "eamodio.gitlens",
+    // PHP
+    "felixfbecker.php-intellisense",
+    "bmewburn.vscode-intelephense-client"
+  ],
+  "settings": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    }
+  },
+  // Docker-Compose
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/app"
+}

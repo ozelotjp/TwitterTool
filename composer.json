@@ -1,0 +1,6 @@
+{
+    "require": {
+        "mpyw/cowitter": "^1.0",
+        "vlucas/phpdotenv": "^4.1"
+    }
+}
