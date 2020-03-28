@@ -10,7 +10,7 @@ session_start();
 $ot = (string) filter_input(INPUT_GET, 'oauth_token');
 $ov = (string) filter_input(INPUT_GET, 'oauth_verifier');
 
-if ($ot === '' || $ov === '') {
+if (isset($_SESSION['client']) === false || $ot === '' || $ov === '') {
   Dotenv::createImmutable(__DIR__)->load();
   $client = new Client([
     getenv('CK'),
