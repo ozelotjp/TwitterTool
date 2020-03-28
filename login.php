@@ -18,7 +18,7 @@ if ($ot === '' || $ov === '') {
   ]);
   $client = $client->oauthForRequestToken('http://localhost:8000/login.php');
   $_SESSION['client'] = $client;
-  header('Location: ' + $client->getAuthorizeUrl());
+  header('Location: ' . $client->getAuthorizeUrl());
   exit;
 } else {
   echo '<pre>';
