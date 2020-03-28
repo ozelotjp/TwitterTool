@@ -4,6 +4,10 @@ It shows the people you've followed on Twitter and the people you've added to yo
 
 In order for this tool to work, you need to register with Twitter as a developer, create an application and get an `API key` and `API secret key` beforehand.
 
+## Screenshot
+
+![](https://i.imgur.com/TF5eMPP.png)
+
 ## What you need
 
 - Docker and Docker-Compose
