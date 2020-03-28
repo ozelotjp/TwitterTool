@@ -21,9 +21,25 @@ if (isset($_SESSION['client']) === false || $ot === '' || $ov === '') {
   header('Location: ' . $client->getAuthorizeUrl());
   exit;
 } else {
-  echo '<pre>';
-  var_dump($_SESSION['client']->oauthForAccessToken($ov));
-  echo '</pre>';
+  [$ck, $cs, $at, $as] = $_SESSION['client']->oauthForAccessToken($ov)->getCredentials();
   $_SESSION = [];
+
+  echo <<< EOM
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <p>
+      CK={$ck}<br>
+      CS={$cs}<br>
+      AT={$at}<br>
+      AS={$as}
+    </p>
+  </body>
+  </html>
+  EOM;
   exit;
 }
