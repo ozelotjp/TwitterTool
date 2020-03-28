@@ -1,4 +1,4 @@
-# ozelotjp/TwitterTool
+# ozelotjp/TwitterTool (temporary name)
 
 It shows the people you've followed on Twitter and the people you've added to your list in a table format.
 
